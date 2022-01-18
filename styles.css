@@ -621,6 +621,10 @@ body {
   max-width: 28rem;
 }
 
+.max-w-full {
+  max-width: 100%;
+}
+
 .scale-90 {
   --tw-scale-x: .9;
   --tw-scale-y: .9;
@@ -946,6 +950,10 @@ body {
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(37 99 235 / 0));
   --tw-gradient-stops: var(--tw-gradient-from), #0ea5e9, var(--tw-gradient-to, rgb(14 165 233 / 0));
   --tw-gradient-to: #0369a1;
+}
+
+* {
+  outline: 2px solid red;
 }
 
 .desktop-navigation > li > a {
