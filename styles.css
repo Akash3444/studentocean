@@ -952,10 +952,6 @@ body {
   --tw-gradient-to: #0369a1;
 }
 
-* {
-  outline: 2px solid red;
-}
-
 .desktop-navigation > li > a {
   position: relative;
   border-radius: 0.5rem;
