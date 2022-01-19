@@ -6,6 +6,9 @@
   "devDependencies": {
     "tailwindcss": "^3.0.15"
   },
+  "scripts": {
+    "watch:css": "npx tailwindcss -i ./tailwind.css -o ./styles.css --watch"
+  },
   "dependencies": {
     "postcss": "^8.4.5"
   }
