@@ -48,3 +48,15 @@
 .features > * {
   @apply even:md:flex-row-reverse;
 }
+
+.posts {
+  columns: 3 16rem;
+  @apply break-inside-avoid;
+}
+
+.posts > * {
+  max-width: 20rem;
+  @apply mx-auto break-inside-avoid;
+  box-shadow: 0 0 20px 0px theme(colors.gray.300);
+  transform: translateZ(0);
+}
