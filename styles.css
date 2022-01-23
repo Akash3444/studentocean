@@ -501,6 +501,11 @@ body {
   right: 0px;
 }
 
+.inset-x-6 {
+  left: 1.5rem;
+  right: 1.5rem;
+}
+
 .top-0 {
   top: 0px;
 }
