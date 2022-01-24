@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./styles.css" />
@@ -13,16 +13,48 @@
   </head>
 
   <body class="bg-blue-50">
-    <div class="max-w-screen-xl mx-auto flex justify-around gap-6 pt-10 px-8">
+    <header class="hidden md:block">
+      <nav
+        class="z-20 fixed top-0 inset-x-0 h-20 flex items-center justify-between bg-black/30 px-8 sm:px-12 backdrop-filter backdrop-blur-[4px]"
+      >
+        <a href="/" class="text-xl font-bold text-white drop-shadow-2xl"
+          >StudentOcean</a
+        >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="md:hidden h-7 w-7 text-white"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"
+          />
+        </svg>
+
+        <ul class="desktop-navigation hidden text-white md:flex gap-8">
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/colleges">Colleges</a></li>
+          <li><a href="/community">Community</a></li>
+          <li><a href="/quiz">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div
+      class="max-w-screen-xl mx-auto flex justify-around gap-6 mt-0 md:mt-28 pt-10 px-8"
+    >
       <aside class="flex-1 hidden md:block w-full max-w-[12rem]">
-        <ul class="flex flex-col items-start">
+        <ul class="flex flex-col gap-y-2 items-start">
           <li
-            class="w-full text-blue-700 bg-blue-200 border-l-4 border-blue-600 p-2"
+            class="w-full text-blue-700 bg-blue-200 border-l-[6px] border-blue-600 py-2 px-4 rounded-lg"
           >
             <a href="#" class="flex items-center gap-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                class="h-6 w-6"
+                class="h-7 w-7"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -38,7 +70,9 @@
             >
           </li>
 
-          <li class="w-full text-zinc-600 p-2 border-l-4 border-transparent">
+          <li
+            class="w-full text-zinc-600 py-2 px-4 border-l-[6px] border-transparent"
+          >
             <a href="#" class="flex items-center gap-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -58,7 +92,9 @@
             >
           </li>
 
-          <li class="w-full text-zinc-600 p-2 border-l-4 border-transparent">
+          <li
+            class="w-full text-zinc-600 py-2 px-4 border-l-[6px] border-transparent"
+          >
             <a href="#" class="flex items-center gap-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +114,9 @@
             >
           </li>
 
-          <li class="w-full text-zinc-600 p-2 border-l-4 border-transparent">
+          <li
+            class="w-full text-zinc-600 py-2 px-4 border-l-[6px] border-transparent"
+          >
             <a href="#" class="flex items-center gap-x-2">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -143,7 +181,9 @@
             <div class="divide-y divide-gray-300">
               <!-- Question, description -->
               <div class="pb-3">
-                <h2 class="text-xl font-bold text-gray-900">What is HTML?</h2>
+                <h2 class="text-2xl font-bold text-gray-900 font-roboto">
+                  What is HTML?
+                </h2>
                 <p class="text-gray-700 mt-2">
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Dolorum accusamus dolor, quo eius dicta veritatis quae atque
@@ -230,7 +270,7 @@
             <div class="divide-y divide-gray-300">
               <!-- Question, description -->
               <div class="pb-3">
-                <h2 class="text-xl font-bold text-gray-900">
+                <h2 class="text-2xl font-bold text-gray-900 font-roboto">
                   How can I become a web developer?
                 </h2>
                 <p class="text-gray-700 mt-2">
@@ -284,11 +324,27 @@
       </main>
 
       <section class="flex-1 hidden lg:block min-w-[16rem] max-w-[16rem]">
-        <button class="w-full bg-blue-600 text-white px-6 py-2 rounded-lg">
-          + Ask a Question
+        <button
+          class="flex items-center justify-center gap-x-2 w-full bg-blue-600 text-white px-6 py-2 rounded-lg"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-4 w-4 text-white"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 4v16m8-8H4"
+            />
+          </svg>
+          <span>Ask a Question</span>
         </button>
 
-        <div class="bg-white shadow-around-lg p-6 mt-10 rounded-lg">
+        <div class="bg-white shadow-around-lg p-6 mt-14 rounded-lg">
           <h6 class="text-gray-900 uppercase font-bold tracking-wide">
             Top Users
           </h6>
@@ -346,90 +402,92 @@
       </section>
     </div>
 
-    <nav
-      class="bottom-nav md:hidden max-w-sm fixed inset-x-0 mx-auto bottom-8 bg-white rounded-lg px-6 py-2"
-    >
-      <ul class="flex items-center justify-between">
-        <li class="text-zinc-500">
-          <a href="#" class="flex flex-col justify-center items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+    <footer>
+      <nav
+        class="bottom-nav md:hidden max-w-[20rem] fixed inset-x-0 mx-auto bottom-8 bg-white rounded-lg px-6 py-2"
+      >
+        <ul class="flex items-center justify-between">
+          <li class="text-blue-600">
+            <a href="#" class="flex flex-col justify-center items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
+                />
+              </svg>
+              <span class="text-[12px]">Home</span></a
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-              />
-            </svg>
-            <span class="text-sm">Home</span></a
-          >
-        </li>
+          </li>
 
-        <li class="text-zinc-500">
-          <a href="#" class="flex flex-col justify-center items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <li class="text-zinc-500">
+            <a href="#" class="flex flex-col justify-center items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M12 4v16m8-8H4"
+                />
+              </svg>
+              <span class="text-[12px]">Create</span></a
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M12 4v16m8-8H4"
-              />
-            </svg>
-            <span class="text-sm">Create</span></a
-          >
-        </li>
+          </li>
 
-        <li class="text-zinc-500">
-          <a href="#" class="flex flex-col justify-center items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <li class="text-zinc-500">
+            <a href="#" class="flex flex-col justify-center items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+                />
+              </svg>
+              <span class="text-[12px]">Search</span></a
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-              />
-            </svg>
-            <span class="text-sm">Search</span></a
-          >
-        </li>
+          </li>
 
-        <li class="text-zinc-500">
-          <a href="#" class="flex flex-col justify-center items-center">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="h-6 w-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
+          <li class="text-zinc-500">
+            <a href="#" class="flex flex-col justify-center items-center">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-7 w-7"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+                />
+              </svg>
+              <span class="text-[12px]">Answers</span></a
             >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
-              />
-            </svg>
-            <span class="text-sm">Answers</span></a
-          >
-        </li>
-      </ul>
-    </nav>
+          </li>
+        </ul>
+      </nav>
+    </footer>
   </body>
 </html>
