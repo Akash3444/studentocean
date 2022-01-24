@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         inter: "'Inter', sans-serif",
+        roboto: "'Roboto', sans-serif",
       },
       boxShadow: {
         around: "0 0 80px 0px theme(colors.gray.200)",
